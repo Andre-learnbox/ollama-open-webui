@@ -7,7 +7,8 @@ services:
     tty: true
     restart: unless-stopped
     image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
-
+    network_mode: "host"
+    
   open-webui:
     build:
       context: .
